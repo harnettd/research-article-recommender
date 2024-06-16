@@ -1,0 +1,9 @@
+scratch*
+messy_requirements.txt
+clean_requirements.py
+
+scratch/
+__pycache__/
+.ipynb_checkpoints/
+data/
+models/
