@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- icons from Flaticon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+    <title>Article Recommender</title>
+</head>
+
+<body>
+    <main>
+        <h1>Research Article Recommender</h1>
+
+        <div class="logo">
+            <i class="logo__img fi fi-rr-hand-back-point-right"></i>
+            <i class="logo__img fi fi-rr-document"></i>
+        </div>
+
+        <h2>Author</h2>
+        <form>
+            <div class="author-name">
+                <input type="text" id="name" class="author-name__input" 
+                    placeholder="Author's Name" required>
+                <p class="author-name__err">Author not in data set.</p>
+            </div>
+            <div class="btn-container">
+                <button id="btn-submit" class="btn-container__btn" type="submit">SUBMIT</button>
+                <button type="reset" class="btn-container__btn">CLEAR</button>
+            </div>
+        </form>
+
+        <h2>Recommendations</h2>
+        <ul id="recommendations-list" class="recommendations-list">   
+        </ul>
+    </main>
+
+    <footer>
+        Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>

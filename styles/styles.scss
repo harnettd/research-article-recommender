@@ -1,0 +1,167 @@
+html {
+    font-size: 62.5%;
+}
+
+
+// Reset
+* > * {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+// Fonts
+$header-font: "Barlow", sans-serif;
+$body-font: "Poppins", sans-serif;
+
+
+// Colours
+$light: #f2f1ec;
+$secondary: #41c1ba;
+$primary: #365b6d;
+$dark: #000000;
+$error: #ff5757;
+
+
+// Tags
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.2rem;
+    background-color: $light;
+}
+
+main {
+    min-width: 36.8rem;
+    max-width: 75.2rem;
+    padding: 1.2rem;
+}
+
+h1 {
+    margin-bottom:3.2rem;
+    font-family: $header-font;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: $primary;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.8rem;
+    font-family: $header-font;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: $primary;
+    text-align:center
+}
+
+footer {
+    font-family: $body-font;
+    font-size: 1.2rem;
+    color: $primary;
+}
+
+footer > a:link {
+    color: $secondary;
+    text-decoration-line: none;
+}
+
+footer > a:hover {
+    text-decoration-line: underline;
+}
+
+
+// Classes
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.4rem;
+
+    &__img {
+        display: block;
+        font-size: 6.4rem;
+    }
+}
+
+.author-name {
+
+    &__input {
+        width: 100%;
+        border: .1rem $primary solid;
+        border-radius: .2rem;
+        padding: .5rem 1rem .3rem 1rem;
+        font-family: $body-font;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $primary;
+    }
+
+    &__err {
+        display: None;
+        margin-top: .4rem;
+        font-family: $body-font;
+        font-size: 1.2rem;
+        color: $error;
+
+        &--on-err {
+            display: block;
+        }
+    }
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+    margin-top: .4rem;
+    margin-bottom: 3.2rem;
+
+    &__btn {
+        width: 100%;
+        border: none;
+        border-radius: .2rem;
+        padding-top: .6rem;
+        padding-bottom: .4rem;
+        font-family: $body-font;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $primary;
+        background-color: $secondary;
+    }
+
+    &__btn:hover {
+        cursor: pointer;
+        color: $secondary;
+        background-color: $primary;
+    }
+}
+
+.recommendations-list {
+    padding-left: 0;
+    line-height: 275%;
+    list-style-type: none;
+
+    &__recommendation {
+        font-family: $body-font;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    &__link:link {
+        text-decoration-line: none;
+        color: $secondary;
+    }
+
+    &__link:visited {
+        color: $primary
+    }
+
+    &__link:hover {
+        text-decoration-line: underline;
+    }
+}
