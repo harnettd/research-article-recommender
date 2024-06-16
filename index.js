@@ -34,8 +34,10 @@ const createNewListItem = doi => {
 }
 
 //  Fetch a list of authors in the recommender's dataset.
-// const apiURL = 'http://127.0.0.1:5000'
-const apiURL = 'https://capstone-article-recommender-3e41bcce122c.herokuapp.com'
+// Local deployment:
+const apiURL = 'http://127.0.0.1:5000'
+// Heroku deployment:
+// const apiURL = 'https://capstone-article-recommender-3e41bcce122c.herokuapp.com'
 const authorsRoute = 'authors'
 const url = `${apiURL}/${authorsRoute}`
 
