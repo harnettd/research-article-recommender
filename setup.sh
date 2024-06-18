@@ -4,7 +4,7 @@
 # the research-article recommender app.
 
 DATADIR="data"
-if ![ ! -d ${DATADIR} ];
+if [ ! -d ${DATADIR} ];
     mkdir ${DATADIR}
 fi
 echo Collecting article data...
@@ -16,7 +16,7 @@ python src/make_dataset.py
 echo ...done
 
 MODELSDIR="models"
-if ![ ! -d ${MODELSDIR} ];
+if [ ! -d ${MODELSDIR} ];
     mkdir ${MODELSDIR}
 fi
 echo Fitting article data...
