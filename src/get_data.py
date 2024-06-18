@@ -15,7 +15,7 @@ from pathlib import Path
 import requests
 from requests.exceptions import HTTPError
 
-from search import SEARCH_TERMS, YEAR
+from search import SEARCH_TERMS, YEAR, LIMIT
 
 
 def get_articles(query: str, limit: int) -> list[dict]:
@@ -105,14 +105,14 @@ def main():
     search = f'({" OR ".join(SEARCH_TERMS)})'
     
     query = f'{search} AND _exists_:doi AND publishedDate>={YEAR}'
-    articles = get_articles(query=query, limit=1_500)
+    articles = get_articles(query=query, limit=LIMIT)
     
     for article in articles:
         article['references'] = get_references(article)
     
     # Dump the collected data to a JSON file.
     file_path = Path(__file__)
-    data_path = file_path.parent.parent.joinpath('data/articles.json')
+    data_path = file_path.parent.parent.joinpath('data/articles-test.json')
     with open(data_path, 'w') as f:
         json.dump(articles, f)
 
