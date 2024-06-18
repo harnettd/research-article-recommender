@@ -33,7 +33,7 @@ matplotlib
 matplotlib-inline
 nest-asyncio
 numexpr
-numpy
+numpy==1.26.4
 packaging
 pandas
 parso
