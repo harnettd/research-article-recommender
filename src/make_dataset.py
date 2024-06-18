@@ -20,7 +20,7 @@ def extract_doi(reference: dict) -> str:
         return None
 
     # Extract the DOI if it's present.
-    match = re.search('doi:(\S*)', ids)    
+    match = re.search(r'doi:(\S*)', ids)    
     if match is None:
         return None
     
@@ -44,7 +44,7 @@ def parse_article(article: dict) -> tuple:
 
 def preprocess_name(name: str) -> str:
     """Collapse whitespace sequences to a single space in a name."""
-    return re.sub('\s+', ' ', name)
+    return re.sub(r'\s+', ' ', name)
 
 
 def score_citation(year: int, half_life: float = 25.0) -> float:
