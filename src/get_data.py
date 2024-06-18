@@ -112,7 +112,7 @@ def main():
     
     # Dump the collected data to a JSON file.
     file_path = Path(__file__)
-    data_path = file_path.parent.parent.joinpath('data/articles-test.json')
+    data_path = file_path.parent.parent.joinpath('data/articles.json')
     with open(data_path, 'w') as f:
         json.dump(articles, f)
 
