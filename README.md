@@ -70,7 +70,7 @@ LIMIT = 1000
 You will need API tokens for the [CORE API](https://core.ac.uk/services/api#what-is-included) and the [OpenCitations API](https://opencitations.net/accesstoken). Save the keys to the environment variables `APIKEY_CORE` and `APIKEY_OPENCITATIONS` respectively. Then, run the setup scipt:
 
 ```bash
-$ source setup.py
+$ source setup.sh
 ```
 
 ## Usage
